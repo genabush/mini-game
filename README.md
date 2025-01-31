@@ -14,6 +14,9 @@
   - Angular Reactife Forms for data handling and validate FormControls
 
 ## Development Setup
+```bash
+npm i or yarn
+```
 
 ```bash
 ng serve
