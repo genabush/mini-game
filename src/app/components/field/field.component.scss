@@ -1,0 +1,30 @@
+.field {
+
+  &__counters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    height: 800px;
+    max-width: 800px;
+  }
+
+
+  &__score,
+  &__timer {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+
+  &__score {
+    margin-right: 1rem;
+  }
+
+}

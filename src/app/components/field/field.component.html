@@ -1,0 +1,11 @@
+<div class="field">
+  <div class="field__counters">
+    <div class="field__score">Score: <span class="counter-decorated">{{ gameState().count }}</span></div>
+    <div class="field__timer">Time Left: <span class="counter-decorated">{{ gameState().timeRemaining }}</span></div>
+  </div>
+  <p class="info">Press <b class="decor">&lt;</b> or <b class="decor">&gt;</b> to move control</p>
+  <div class="field__inner">
+    <ball-list [balls]="gameState().balls"></ball-list>
+    <player-control [playerPosition]="gameState().playerPosition"></player-control>
+  </div>
+</div>

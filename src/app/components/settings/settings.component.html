@@ -1,0 +1,33 @@
+<form [formGroup]="settingsForm" class="settings-form">
+  <label class="settings-form__el">
+    <span class="settings-form__el-title">Falling Speed</span>
+    <input class="settings-form__input" formControlName="fallingSpeed" type="number" />
+    @if(settingsForm.get('fallingSpeed')?.errors){
+    <span class="error-text">{{errorText('Falling Speed')}}</span>
+    }
+  </label>
+
+  <label class="settings-form__el">
+    <span class="settings-form__el-title">Falling Frequency</span>
+    <input class="settings-form__input" formControlName="fallingFrequency" type="number" />
+    @if(settingsForm.get('fallingFrequency')?.errors){
+    <span class="error-text">{{errorText('Falling Frequency')}}</span>
+    }
+  </label>
+  <label class="settings-form__el">
+    <span class="settings-form__el-title">Player Speed</span>
+    <input class="settings-form__input" formControlName="playerSpeed" type="number" />
+    @if(settingsForm.get('playerSpeed')?.errors){
+    <span class="error-text">{{errorText('Player Speed')}}</span>
+    }
+  </label>
+  <label class="settings-form__el">
+    <span class="settings-form__el-title">Game Time</span>
+    <input class="settings-form__input" formControlName="gameTime" type="number" />
+    @if(settingsForm.get('gameTime')?.errors){
+    <span class="error-text">{{errorText('Game Time')}}</span>
+    }
+  </label>
+  <button [disabled]="settingsForm.invalid" (click)="startGame()" class="settings-form__btn" type="button">Start
+    Game</button>
+</form>

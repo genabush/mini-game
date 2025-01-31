@@ -1,0 +1,41 @@
+.settings-form {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border-color: 1px solid var(--input-border-color);
+
+  &__btn {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--main-bg-color);
+    font-size: 1.25rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+
+  &__el {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+    color: var(--main-bg-color);
+
+    &-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  &__input {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid var(--input-border-color);
+  }
+}

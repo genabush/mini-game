@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --field-bg-color: #5b9a8c;
+  --main-bg-color: blue;
+  --ball-bg-color: #fff;
+  --input-border-color: #cecece;
+  --text-color: var(--ball-bg-color);
+  --text-decor-color: var(--main-bg-color);
+  --error-color: #D2042D;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", serif;
+  background-color: var(--field-bg-color);
+
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+field {
+  overflow: hidden;
+  padding-top: 10px;
+  border-radius: 0.5rem;
+  max-width: 800px;
+  width: 100%;
+  border: 3px solid var(--input-border-color);
+  margin-top: 1rem;
+}
+
+settings {
+  flex-grow: 1;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.info {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.decor {
+  color: var(--text-decor-color);
+}
+
+.error-text {
+  font-weight: bold;
+  color: var(--error-color);
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: 14px;
+}
+
+input.ng-dirty.ng-invalid {
+  color: var(--error-color);
+  border: 1px solid var(--error-color);
+}
+
+.counter-decorated {
+  color: var(--text-decor-color);
+  font-weight: 900;
+}
