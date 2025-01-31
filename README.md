@@ -1,6 +1,4 @@
-# Test
-
-A Angular Mini-Game 'Catch Us'.
+# Angular Mini-Game 'Catch Us'
 
 ## Key Features
 
