@@ -33,10 +33,11 @@ export class SettingsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    // listen form value changes to update settings for the game on fly
-    this.listenFormValueChanges();
     // listen gameTime formControlName to start new game if value in control was changed 
     this.listenGameTimeChanges();
+    // listen form value changes to update settings for the game on fly
+    this.listenFormValueChanges();
+
   }
 
   ngOnDestroy(): void {
@@ -62,7 +63,11 @@ export class SettingsComponent implements OnInit, OnDestroy {
     this.settingsForm?.get('gameTime')?.valueChanges.pipe(
       takeUntil(this.destroy$))
       .subscribe(_value => {
-        this.gameService.startGame();
+        if (this.settingsForm.valid) {
+          setTimeout(() => {
+            this.gameService.startGame();
+          }, 0)
+        }
       });
   }
 }

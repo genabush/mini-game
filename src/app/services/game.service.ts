@@ -35,6 +35,7 @@ export class GameService {
 
   // Start the game logic: intervals for handling time and ball updates
   startGame() {
+    console.log(this.settingsState$.value);
     // Clear any previous interval and reset the destroy signal
     this.destroy$.next();
     this.destroy$.complete();
@@ -49,6 +50,7 @@ export class GameService {
     // Update the time remaining every second
     interval(1000).pipe(takeUntil(this.destroy$)).subscribe(() => {
       if (timeRemaining <= 0) {
+        balls = [];
         // Stop the game if time runs out
         this.destroy$.next();
         return;
